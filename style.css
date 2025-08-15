@@ -1,0 +1,44 @@
+/* Definição de cores da marca usando variáveis CSS para fácil manutenção */
+:root {
+    --brand-primary: #ef3e42;
+    --brand-secondary: #6dc05a;
+    --brand-accent: #65cff6;
+    --brand-dark: #000000;
+    --brand-light: #ffffff;
+}
+
+/* Animação para o fundo da seção hero */
+.hero-bg-blur {
+    animation: pulse-bg 10s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-bg {
+    0%, 100% {
+        transform: scale(1) translate(-10%, -10%);
+    }
+    50% {
+        transform: scale(1.1) translate(10%, 10%);
+    }
+}
+
+/* Animação para os elementos que aparecem com fade-in */
+.animate-fade-in {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação de rotação para o botão de mudo */
+.rotate-360 {
+    transition: transform 0.3s ease-in-out;
+}
+.rotate-360:active {
+    transform: rotate(360deg);
+}
