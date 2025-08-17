@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://tavalim.com.br/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://tavalim.com.br/servicos</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tavalim.com.br/portfolio</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tavalim.com.br/sobre</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tavalim.com.br/contato</loc>
+    <priority>0.7</priority>
+  </url>
+</urlset>
