@@ -1,297 +1,252 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAVALIM - Iluminação Profissional</title>
-    <!-- Adicionando a fonte Inter do Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/favicon.ico">
-    <!-- Vinculando o Tailwind CSS e configurando as cores da marca -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            primary: '#ef3e42',
-                            secondary: '#6dc05a',
-                            accent: '#65cff6',
-                            dark: '#000000',
-                            light: '#ffffff',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- Vinculando o arquivo de estilos personalizado -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TAVALIM | Iluminação profissional, painéis de LED e palcos para eventos</title>
+  <meta name="description" content="Iluminação profissional, painéis de LED, palcos e estruturas de alumínio para eventos públicos, corporativos, casamentos e aniversários. Operação técnica com GrandMA2. Base no Nordeste, atendimento em todo o Brasil.">
+  <meta name="theme-color" content="#000000">
+  <link rel="canonical" href="https://tavalim.com.br/">
+  <link rel="icon" href="assets/favicon.ico">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="TAVALIM Iluminação Profissional">
+  <meta property="og:title" content="TAVALIM | Iluminação profissional para eventos">
+  <meta property="og:description" content="Iluminação, painéis de LED, palcos e estruturas de alumínio. Do projeto à operação técnica.">
+  <meta property="og:url" content="https://tavalim.com.br/">
+  <meta property="og:image" content="https://tavalim.com.br/assets/1.JPEG">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "TAVALIM Iluminação Profissional",
+    "url": "https://tavalim.com.br/",
+    "logo": "https://tavalim.com.br/assets/Tavalim-2.png",
+    "email": "contato@tavalim.com.br",
+    "sameAs": ["https://www.instagram.com/tavalimiluminacaopro/", "https://www.youtube.com/@TavalimIluminacaoPRO"]
+  }
+  </script>
 </head>
-<body class="min-h-screen bg-slate-950 text-slate-50">
+<body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
 
-    <!-- NAVBAR -->
-    <header class="sticky top-0 z-50 backdrop-blur bg-slate-950/70 border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="#home" class="flex items-center gap-3">
-                <!-- Logo da Tavalim -->
-                <img src="assets/Tavalim-2.png" alt="Logo Tavalim Iluminação Profissional" class="h-12 w-auto">
-            </a>
+  <header class="hdr" id="topo">
+    <a class="hdr__logo" href="#topo" aria-label="TAVALIM, início">
+      <img src="assets/Tavalim-2.png" alt="TAVALIM Iluminação Profissional" width="180" height="56">
+    </a>
+    <nav class="hdr__nav" id="menu" aria-label="Principal">
+      <a href="#solucoes">Soluções</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#artistas" data-artists-link hidden>Artistas</a>
+      <a href="#estrutura">Estrutura</a>
+      <a href="#orcamento">Orçamento</a>
+    </nav>
+    <a class="btn btn--red hdr__cta" href="https://wa.me/5587991424859?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20meu%20evento." target="_blank" rel="noopener">Pedir orçamento</a>
+    <button class="hdr__burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span></button>
+  </header>
 
-            <nav class="hidden md:flex items-center gap-6 text-sm">
-                <a href="#servicos" class="hover:text-brand-secondary">Serviços</a>
-                <a href="#portfolio" class="hover:text-brand-secondary">Portfólio</a>
-                <a href="#sobre" class="hover:text-brand-secondary">Sobre</a>
-                <a href="https://links.tavalim.com.br" class="hover:text-brand-secondary">Contato</a>
-                <a href="login.html" target="_blank" class="px-4 py-2 rounded-2xl bg-brand-accent/90 hover:bg-brand-accent text-slate-900 font-semibold shadow">
-                    Arquivos
-                </a>
-                <a href="https://wa.me/5587991424859?text=Olá! Quero um orçamento para meu evento." target="_blank" class="px-4 py-2 rounded-2xl bg-brand-secondary/90 hover:bg-brand-secondary text-slate-900 font-semibold shadow">
-                    WhatsApp
-                </a>
-            </nav>
-
-            <button id="menu-btn" class="md:hidden inline-flex items-center justify-center p-2 rounded-xl border border-white/10" aria-label="Abrir menu">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-            </button>
-        </div>
-        <div id="mobile-menu" class="md:hidden border-t border-white/5 hidden">
-            <div class="px-4 py-3 flex flex-col gap-3">
-                <a href="#servicos" class="hover:text-brand-secondary">Serviços</a>
-                <a href="#portfolio" class="hover:text-brand-secondary">Portfólio</a>
-                <a href="#sobre" class="hover:text-brand-secondary">Sobre</a>
-                <a href="https://links.tavalim.com.br" class="hover:text-brand-secondary">Contato</a>
-                <a href="login.html" target="_blank" class="px-4 py-2 rounded-xl bg-brand-accent/90 hover:bg-brand-accent text-slate-900 font-semibold text-center">Login</a>
-                <a href="https://wa.me/5587991424859?text=Olá! Quero um orçamento para meu evento." target="_blank" class="px-4 py-2 rounded-xl bg-brand-secondary/90 hover:bg-brand-secondary text-slate-900 font-semibold text-center">WhatsApp</a>
-            </div>
-        </div>
-    </header>
+  <main id="conteudo">
 
     <!-- HERO -->
-    <section id="home" class="relative overflow-hidden">
-        <div class="absolute inset-0 -z-10 opacity-30 hero-bg-blur" aria-hidden>
-            <div class="absolute -top-24 -right-24 h-80 w-80 rounded-full blur-3xl" style="background: var(--brand-primary);"></div>
+    <section class="hero" aria-labelledby="hero-titulo">
+      <div class="hero__media" aria-hidden="true">
+        <iframe class="hero__video" title="" tabindex="-1"
+          data-src="https://player.vimeo.com/video/1110364929?background=1&autoplay=1&loop=1&muted=1&byline=0&title=0&portrait=0"
+          allow="autoplay; fullscreen" loading="eager"></iframe>
+      </div>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <h1 class="hero__title" id="hero-titulo">
+          <span class="line"><span>Transformamos</span></span>
+          <span class="line"><span>eventos em</span></span>
+          <span class="line"><span>experiências</span></span>
+          <span class="line"><span>inesquecíveis.</span></span>
+        </h1>
+        <div class="hero__side">
+          <p>Iluminação profissional, painéis de LED, palcos e estruturas de alumínio. Operação técnica do início ao fim.</p>
+          <div class="hero__actions">
+            <a class="btn btn--red" href="#orcamento">Pedir orçamento</a>
+            <a class="btn btn--line" href="#eventos">Ver eventos</a>
+          </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 py-20 lg:py-28 grid lg:grid-cols-2 gap-10 items-center">
-            <div>
-                <h2 class="text-4xl md:text-5xl font-black leading-tight">
-                    Transformamos eventos em <span class="text-brand-primary">experiências inesquecíveis</span>.
-                </h2>
-                <p class="mt-5 text-slate-300 text-lg">
-                    Soluções completas em iluminação profissional, painéis de LED, palcos e estruturas de alumínio.
-                    Atendimento para eventos públicos, corporativos, casamentos e aniversários.
-                </p>
-                <div class="mt-8 flex flex-wrap gap-4">
-                    <a href="https://wa.me/5587991424859?text=Olá! Quero um orçamento para meu evento." target="_blank" class="px-6 py-3 rounded-2xl bg-brand-secondary text-slate-900 font-semibold shadow-lg hover:bg-brand-secondary/90">
-                        Pedir orçamento
-                    </a>
-                    <a href="#portfolio" class="px-6 py-3 rounded-2xl border border-white/10 hover:border-white/30">
-                        Ver portfólio
-                    </a>
-                </div>
-                <div class="mt-6 text-sm text-slate-400">
-                    Operação técnica com GrandMA2 da MAlighting.
-                </div>
-            </div>
-
-            <div>
-                <div class="aspect-video w-full rounded-3xl overflow-hidden ring-1 ring-white/10 shadow-2xl relative">
-                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1110364929?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" 
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Rei das Vaquejadas"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-                </div>
-            </div>
-        </div>
+      </div>
+      <div class="tri" aria-hidden="true"></div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="servicos" class="py-16 lg:py-20 bg-slate-900/40 border-y border-white/5">
-        <div class="max-w-7xl mx-auto px-4">
-            <h3 class="text-2xl md:text-3xl font-extrabold">Serviços</h3>
-            <p class="mt-2 text-slate-300">Projeto, montagem e operação técnica do início ao fim.</p>
-
-            <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Painel de LED -->
-                <div class="rounded-3xl p-6 bg-slate-900/70 border border-white/5 shadow-xl hover:border-brand-secondary/30 animate-fade-in" style="animation-delay: 0s;">
-                    <div class="text-3xl" aria-hidden>&#x1F7E9;</div>
-                    <h4 class="mt-3 font-bold text-lg">Paineis de LED</h4>
-                    <p class="mt-2 text-slate-300 text-sm">Trabalhamos com Paineis Outdoor NovaStar P3.91 de Alta definição para palcos, palestras e ativações de marca.</p>
-                </div>
-                <!-- Palco -->
-                <div class="rounded-3xl p-6 bg-slate-900/70 border border-white/5 shadow-xl hover:border-brand-secondary/30 animate-fade-in" style="animation-delay: 0.03s;">
-                    <div class="text-3xl" aria-hidden>&#x1F3A4;</div>
-                    <h4 class="mt-3 font-bold text-lg">Palco</h4>
-                    <p class="mt-2 text-slate-300 text-sm">Montagem segura e modular para qualquer porte de evento.</p>
-                </div>
-                <!-- Estruturas de Alumínio (Box Truss) -->
-                <div class="rounded-3xl p-6 bg-slate-900/70 border border-white/5 shadow-xl hover:border-brand-secondary/30 animate-fade-in" style="animation-delay: 0.06s;">
-                    <div class="text-3xl" aria-hidden>&#x1F9F1;</div>
-                    <h4 class="mt-3 font-bold text-lg">Estruturas de Alumínio (Box Truss)</h4>
-                    <p class="mt-2 text-slate-300 text-sm">Rigging profissional para iluminação, PA e cenografia.</p>
-                </div>
-                <!-- Eventos Públicos & Corporativos -->
-                <div class="rounded-3xl p-6 bg-slate-900/70 border border-white/5 shadow-xl hover:border-brand-secondary/30 animate-fade-in" style="animation-delay: 0.09s;">
-                    <div class="text-3xl" aria-hidden>&#x1F3DF;️</div>
-                    <h4 class="mt-3 font-bold text-lg">Eventos Públicos & Corporativos</h4>
-                    <p class="mt-2 text-slate-300 text-sm">Projetos completos com operação técnica e logística.</p>
-                </div>
-                <!-- Casamentos & Aniversários -->
-                <div class="rounded-3xl p-6 bg-slate-900/70 border border-white/5 shadow-xl hover:border-brand-secondary/30 animate-fade-in" style="animation-delay: 0.12s;">
-                    <div class="text-3xl" aria-hidden>&#x1F48D;</div>
-                    <h4 class="mt-3 font-bold text-lg">Casamentos & Aniversários</h4>
-                    <p class="mt-2 text-slate-300 text-sm">Clima cênico, pistas de dança e momentos memoráveis.</p>
-                </div>
-                <!-- Iluminação Cênica Profissional -->
-                <div class="rounded-3xl p-6 bg-slate-900/70 border border-white/5 shadow-xl hover:border-brand-secondary/30 animate-fade-in" style="animation-delay: 0.15s;">
-                    <div class="text-3xl" aria-hidden>✨</div>
-                    <h4 class="mt-3 font-bold text-lg">Iluminação Cênica Profissional</h4>
-                    <p class="mt-2 text-slate-300 text-sm">Oferecemos os melhores equipamentos para o seu evento, proporcionando experiências unicas</p>
-                </div>
-            </div>
-        </div>
+    <!-- APRESENTAÇÃO -->
+    <section class="intro" aria-labelledby="intro-titulo">
+      <div class="wrap intro__grid">
+        <h2 class="intro__title" id="intro-titulo">Projeto, montagem e operação técnica do início ao fim.</h2>
+        <p class="intro__text">Atendemos com agilidade e foco em segurança, com equipamentos modernos e equipe especializada. Do planejamento à operação, cuidamos de tudo para que o seu evento brilhe.</p>
+      </div>
     </section>
 
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="py-16 lg:py-20">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex items-end justify-between gap-4">
-                <div>
-                    <h3 class="text-2xl md:text-3xl font-extrabold">Portfólio</h3>
-                    <p class="mt-2 text-slate-300">Alguns registros de montagens e eventos.</p>
-                </div>
-                <a href="https://www.instagram.com/tavalimiluminacaopro/" target="_blank" class="text-sm underline hover:text-brand-secondary flex items-center gap-2 font-bold">
-                    <span>Acompanhe a gente no Instagram</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
-                </a>
-            </div>
-
-            <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <!-- Imagem 1 -->
-                <figure class="overflow-hidden rounded-2xl ring-1 ring-white/10 shadow-lg animate-fade-in" style="animation-delay: 0s;">
-                    <img src="assets/1.JPEG" alt="Show público com painéis de LED" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy"/>
-                </figure>
-                <!-- Imagem 2 -->
-                <figure class="overflow-hidden rounded-2xl ring-1 ring-white/10 shadow-lg animate-fade-in" style="animation-delay: 0.04s;">
-                    <img src="assets/2.JPEG" alt="Palco com iluminação colorida" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy"/>
-                </figure>
-                <!-- Imagem 3 -->
-                <figure class="overflow-hidden rounded-2xl ring-1 ring-white/10 shadow-lg animate-fade-in" style="animation-delay: 0.08s;">
-                    <img src="assets/3.JPEG" alt="Estruturas de alumínio" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy"/>
-                </figure>
-                <!-- Imagem 4 -->
-                <figure class="overflow-hidden rounded-2xl ring-1 ring-white/10 shadow-lg animate-fade-in" style="animation-delay: 0.12s;">
-                    <img src="assets/4.JPEG" alt="Casamento com pista de dança" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy"/>
-                </figure>
-            </div>
+    <!-- SOLUÇÕES -->
+    <section class="solutions" id="solucoes" aria-labelledby="solucoes-titulo">
+      <div class="wrap solutions__grid">
+        <div class="solutions__stage" aria-hidden="true">
+          <div class="stage">
+            <i class="stage__beam" style="--a:-38deg"></i>
+            <i class="stage__beam" style="--a:-19deg"></i>
+            <i class="stage__beam" style="--a:0deg"></i>
+            <i class="stage__beam" style="--a:19deg"></i>
+            <i class="stage__beam" style="--a:38deg"></i>
+            <span class="stage__bar"></span>
+          </div>
         </div>
+        <div class="solutions__body">
+          <h2 class="h2" id="solucoes-titulo">Soluções</h2>
+          <ul class="svc">
+            <li class="svc__item" data-color="red">
+              <h3>Iluminação cênica profissional</h3>
+              <p>Os melhores equipamentos para o seu evento, com operação técnica em GrandMA2 da MA Lighting.</p>
+            </li>
+            <li class="svc__item" data-color="cyan">
+              <h3>Painéis de LED</h3>
+              <p>Painéis outdoor NovaStar P3.91, de alta definição, para palcos, palestras e ativações de marca.</p>
+            </li>
+            <li class="svc__item" data-color="green">
+              <h3>Palco</h3>
+              <p>Montagem segura e modular para qualquer porte de evento.</p>
+            </li>
+            <li class="svc__item" data-color="red">
+              <h3>Estruturas de alumínio (box truss)</h3>
+              <p>Rigging profissional para iluminação, PA e cenografia.</p>
+            </li>
+            <li class="svc__item" data-color="cyan">
+              <h3>Eventos públicos e corporativos</h3>
+              <p>Projetos completos, com operação técnica e logística.</p>
+            </li>
+            <li class="svc__item" data-color="green">
+              <h3>Casamentos e aniversários</h3>
+              <p>Clima cênico, pistas de dança e momentos memoráveis.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="sobre" class="py-16 lg:py-20 bg-slate-900/40 border-y border-white/5">
-        <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-3 gap-10 items-center">
-            <div class="lg:col-span-2">
-                <h3 class="text-2xl md:text-3xl font-extrabold">Sobre nós</h3>
-                <p class="mt-4 text-slate-300 leading-relaxed">
-                    Atendemos com agilidade e foco em segurança, utilizando equipamentos modernos e equipe especializada
-                    para entregar um espetáculo de luz com confiabilidade. Do planejamento à operação, cuidamos de tudo
-                    para que o seu evento brilhe.
-                </p>
-                <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm text-slate-300">
-                    <li class="flex items-center gap-2"><span class="text-brand-secondary">&#x2714;</span> Projetos de iluminação sob medida</li>
-                    <li class="flex items-center gap-2"><span class="text-brand-secondary">&#x2714;</span> Operação com GrandMA2 e timecode</li>
-                    <li class="flex items-center gap-2"><span class="text-brand-secondary">&#x2714;</span> Estruturas box truss e palcos modulares</li>
-                    <li class="flex items-center gap-2"><span class="text-brand-secondary">&#x2714;</span> Portfólio em eventos públicos e corporativos</li>
-                </ul>
-            </div>
-            <div class="rounded-3xl p-6 bg-slate-900/70 border border-white/5 shadow-xl">
-                <h4 class="font-bold">Atendemos em todo o Brasil</h4>
-                <p class="mt-2 text-sm text-slate-300">Com base no Nordeste e logística para outras regiões.</p>
-                <div class="mt-4 text-sm">
-                    <div class="flex items-center justify-between py-2 border-b border-white/5">
-                        <span class="text-slate-300">Prazo médio de montagem</span>
-                        <strong class="text-slate-50">Sob projeto</strong>
-                    </div>
-                    <div class="flex items-center justify-between py-2 border-b border-white/5">
-                        <span class="text-slate-300">Capacidade</span>
-                        <strong class="text-slate-50">Pequeno a grande porte</strong>
-                    </div>
-                    <div class="flex items-center justify-between py-2">
-                        <span class="text-slate-300">Suporte</span>
-                        <strong class="text-slate-50">Antes, durante e após o evento</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- EVENTOS (painéis empilhados) -->
+    <section class="events" id="eventos" aria-labelledby="eventos-titulo">
+      <div class="wrap">
+        <h2 class="h1" id="eventos-titulo">Qual é o seu evento?</h2>
+      </div>
+      <div class="stack">
+        <article class="panel" style="--i:0">
+          <img class="panel__img" src="assets/1.JPEG" alt="Show público com painéis de LED" loading="lazy" onerror="this.remove()">
+          <div class="panel__txt">
+            <h3>Eventos públicos</h3>
+            <p>Palco, iluminação e painéis de LED para grandes públicos.</p>
+          </div>
+        </article>
+        <article class="panel" style="--i:1">
+          <img class="panel__img" src="assets/2.JPEG" alt="Palco com iluminação colorida" loading="lazy" onerror="this.remove()">
+          <div class="panel__txt">
+            <h3>Palcos e eventos corporativos</h3>
+            <p>Projeto de luz e operação técnica para palestras, convenções e ativações.</p>
+          </div>
+        </article>
+        <article class="panel" style="--i:2">
+          <img class="panel__img" src="assets/3.JPEG" alt="Estruturas de alumínio" loading="lazy" onerror="this.remove()">
+          <div class="panel__txt">
+            <h3>Estruturas</h3>
+            <p>Box truss e rigging para iluminação, PA e cenografia.</p>
+          </div>
+        </article>
+        <article class="panel" style="--i:3">
+          <img class="panel__img" src="assets/4.JPEG" alt="Casamento com pista de dança" loading="lazy" onerror="this.remove()">
+          <div class="panel__txt">
+            <h3>Casamentos e aniversários</h3>
+            <p>Clima cênico e iluminação para pistas de dança.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contato" class="py-16 lg:py-20">
-        <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10">
-            <div>
-                <h3 class="text-2xl md:text-3xl font-extrabold">Solicite um orçamento</h3>
-                <p class="mt-3 text-slate-300">Responda com a data, cidade, público estimado e serviços desejados.</p>
-
-                <div class="mt-6 flex flex-wrap gap-4">
-                    <a href="https://wa.me/5587991424859?text=Olá! Quero um orçamento para meu evento." target="_blank" class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-brand-secondary text-slate-900 font-semibold shadow-lg hover:bg-brand-secondary/90">
-                        <span>Falar no WhatsApp</span>
-                    </a>
-                    <a href="mailto:contato@tavalim.com.br" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl border border-white/10 hover:border-white/30">
-                        <span>Enviar e-mail</span>
-                    </a>
-                    <a href="https://www.instagram.com/tavalimiluminacaopro/" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl border border-white/10 hover:border-white/30">
-                        <span>Instagram</span>
-                    </a>
-                </div>
-                <div>
-                    <img style="display: block; margin-left: 10px;" width="70%" src="assets/Tavalim-2.png" alt="Logo tavalimiluminacaopro">
-                </div>
-            </div>
-
-            <form action="https://formspree.io/f/xpwlnnly" method="POST" class="rounded-3xl p-6 bg-slate-900/70 border border-white/5 shadow-xl">
-                <div class="grid grid-cols-1 gap-4">
-                    <p class="text-sm text-slate-400">Ou envie seu e-mail para: <a href="mailto:contato@tavalim.com.br" class="text-white hover:text-brand-secondary transition-colors">contato@tavalim.com.br</a></p>
-                    <label class="text-sm">
-                        <span class="text-slate-300">Nome</span>
-                        <input type="text" name="name" required class="mt-1 w-full rounded-xl bg-slate-900 border border-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-secondary" />
-                    </label>
-                    <label class="text-sm">
-                        <span class="text-slate-300">E-mail</span>
-                        <input type="email" name="_replyto" required class="mt-1 w-full rounded-xl bg-slate-900 border border-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-secondary" />
-                    </label>
-                    <label class="text-sm">
-                        <span class="text-slate-300">Mensagem</span>
-                        <textarea rows="4" name="message" class="mt-1 w-full rounded-xl bg-slate-900 border border-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-secondary" placeholder="Data, cidade, público, serviços..."></textarea>
-                    </label>
-                    <button type="submit" class="mt-2 px-5 py-3 rounded-2xl bg-brand-secondary text-slate-900 font-semibold hover:bg-brand-secondary/90">
-                        Enviar
-                    </button>
-                </div>
-                <p class="mt-3 text-xs text-slate-400">*Tempo de resposta do e-mail é de 72hrs, recomendamos direct do instagram ou se preferir se direcione ao WhatsApp para um tempo melhor de resposta.</p>
-            </form>
-        </div>
+    <!-- ARTISTAS (baralho horizontal, preenchido por js/artists.js) -->
+    <section class="artists" id="artistas" aria-labelledby="artistas-titulo" hidden>
+      <div class="wrap">
+        <header class="artists__head">
+          <h2 class="h1" id="artistas-titulo">Artistas que já passaram pelos nossos palcos</h2>
+          <div class="artists__ctrl">
+            <span class="artists__count"><b data-art-cur>01</b> / <span data-art-total>01</span></span>
+            <button type="button" class="arrow" data-art-prev aria-label="Artista anterior">&#8592;</button>
+            <button type="button" class="arrow" data-art-next aria-label="Próximo artista">&#8594;</button>
+          </div>
+        </header>
+      </div>
+      <div class="deck" data-deck tabindex="0" role="group" aria-roledescription="carrossel" aria-label="Artistas atendidos. Use as setas do teclado ou arraste para o lado.">
+        <ul class="deck__cards" data-art-track></ul>
+      </div>
+      <p class="deck__hint wrap" aria-hidden="true">Arraste para o lado</p>
+      <p class="sr-only" aria-live="polite" data-art-live></p>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="py-10 border-t border-white/5 text-sm">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p>
-                © 2025 TAVALIM ILUMINAÇÃO PROFISSIONAL. Site desenvolvido por <a href="https://www.instagram.com/osmar.t.neto/" target="_blank">Osmar Tavares</a>. Todos os direitos reservados.
-              </p>
-            <div class="flex items-center gap-4">
-                <a href="#home" class="hover:text-brand-secondary">Topo</a>
-                <a href="https://www.instagram.com/tavalimiluminacaopro/" target="_blank" class="hover:text-brand-secondary">Instagram</a>
-                <a href="mailto:contato@tavalim.com.br" target="_blank" class="hover:text-brand-secondary">E-mail</a>
-            </div>
+    <!-- ESTRUTURA -->
+    <section class="spec" id="estrutura" aria-labelledby="estrutura-titulo">
+      <div class="wrap spec__grid">
+        <h2 class="h1" id="estrutura-titulo">A estrutura por trás do evento</h2>
+        <dl class="spec__list">
+          <div><dt>Painéis de LED</dt><dd>NovaStar outdoor P3.91</dd></div>
+          <div><dt>Iluminação</dt><dd>Operação com GrandMA2 e timecode</dd></div>
+          <div><dt>Estruturas</dt><dd>Box truss de alumínio</dd></div>
+          <div><dt>Palcos</dt><dd>Modulares, de pequeno a grande porte</dd></div>
+          <div><dt>Atendimento</dt><dd>Base no Nordeste, logística para outras regiões</dd></div>
+          <div><dt>Suporte</dt><dd>Antes, durante e após o evento</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ORÇAMENTO -->
+    <section class="quote" id="orcamento" aria-labelledby="orcamento-titulo">
+      <div class="wrap quote__grid">
+        <div class="quote__lead">
+          <h2 class="display" id="orcamento-titulo">Qual é a data do seu evento?</h2>
+          <p>Envie a data, a cidade, o público estimado e os serviços que você precisa.</p>
+          <div class="quote__actions">
+            <a class="btn btn--red btn--lg" href="https://wa.me/5587991424859?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20meu%20evento." target="_blank" rel="noopener">Falar no WhatsApp</a>
+            <a class="btn btn--line btn--lg" href="https://www.instagram.com/tavalimiluminacaopro/" target="_blank" rel="noopener">Instagram</a>
+          </div>
         </div>
-    </footer>
-    
-    <!-- Vinculando o arquivo de script personalizado -->
-    <script src="script.js"></script>
+        <form class="form" name="orcamento" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="orcamento">
+          <p class="form__hp"><label>Não preencha: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <h3>Ou envie por e-mail</h3>
+          <label>Nome<input type="text" name="nome" autocomplete="name" required></label>
+          <label>E-mail<input type="email" name="email" autocomplete="email" required></label>
+          <label>Mensagem<textarea name="mensagem" rows="4" required></textarea></label>
+          <button class="btn btn--line" type="submit">Enviar mensagem</button>
+          <small>O e-mail é respondido em até 72 horas. Para uma resposta mais rápida, use o WhatsApp ou o direct do Instagram.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ftr">
+    <div class="tri" aria-hidden="true"></div>
+    <div class="wrap ftr__grid">
+      <img class="ftr__logo" src="assets/Tavalim-2.png" alt="TAVALIM Iluminação Profissional" width="180" height="56" loading="lazy">
+      <ul class="ftr__links">
+        <li><a href="https://wa.me/5587991424859" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="mailto:contato@tavalim.com.br">contato@tavalim.com.br</a></li>
+        <li><a href="https://www.instagram.com/tavalimiluminacaopro/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.youtube.com/@TavalimIluminacaoPRO" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://links.tavalim.com.br" target="_blank" rel="noopener">Links</a></li>
+        <li><a href="https://tavalim.com.br/login">Arquivos</a></li>
+      </ul>
+      <p class="ftr__copy">© 2026 TAVALIM Iluminação Profissional. Site desenvolvido por <a href="https://www.instagram.com/osmar.t.neto/" target="_blank" rel="noopener">Osmar Tavares</a>.</p>
+    </div>
+  </footer>
+
+  <script src="js/artists.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
